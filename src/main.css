@@ -1,18 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+// reset
 * {
+  font-family: 'DM Sans', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
+  align-items: center;
+  background: linear-gradient(105.94deg, #0E0D10 24.24%, #0E0D10 53.01%, #121216 75.95%);
   margin: 0;
   display: flex;
+  justify-content: center;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: green;
+}
+
+input:hover {
+  box-shadow: 0px 0px 20px #855BDE;
 }
