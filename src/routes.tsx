@@ -1,12 +1,13 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import Login from "./pages";
+import * as Pages from "./pages";
 
 
 function MainRoutes() {
   return (
     <Routes>
       <Route path="/" element={ <Navigate to="/login" />} />
-      <Route path="/login" element={ <Login />} />
+      <Route path="/login" element={<Pages.Login />} />
+      <Route path="/welcome" element={<Pages.Welcome />} />
     </Routes>
   )
 }
