@@ -24,24 +24,24 @@ function FormLogin({ email, setEmail, senha, setSenha, onClickEvent, loading }: 
         <div className="flex flex-col z-10">
           <label className="text-gray-400 flex flex-col font-normal text-[14px] leading-5">
             Email
-            <div className="hover:bg-gradient-to-tr from-[#4158D0] via-[#C850C0] to-[#FFCC70] hover:p-px rounded-2xl h-15 flex items-center w-full mt-[8px]">
+            <div className="bg-none focus-within:bg-gradient-to-tr from-[#4158D0] via-[#C850C0] to-[#FFCC70] p-px rounded-2xl h-15 flex items-center w-full mt-[8px]">
               <input
                 type="email"
                 value={email}
                 onChange={handleChangeEmail}
-                className="rounded-2xl w-full h-[53px] bg-[#111112] text-[22px] text-white pl-1 pr-1"
+                className="rounded-2xl w-full h-[53px] bg-[#111112] text-[22px] text-white pl-1 pr-1 outline-none"
               />
             </div>
           </label>
 
           <label className="text-gray-400 flex flex-col font-normal text-[14px] leading-5 mt-7">
             Senha
-            <div className="hover:bg-gradient-to-tr from-[#4158D0] via-[#C850C0] to-[#FFCC70] hover:p-px rounded-2xl h-15 flex items-center w-full mt-[8px] z-10">
+            <div className="bg-none focus-within:bg-gradient-to-tr from-[#4158D0] via-[#C850C0] to-[#FFCC70] p-px rounded-2xl h-15 flex items-center w-full mt-[8px] z-10">
               <input
                 type="password"
                 value={senha}
                 onChange={ handleChangeSenha }
-                className="rounded-2xl w-full h-[53px] bg-[#111112] text-[22px] text-white pl-1 pr-1" />
+                className="rounded-2xl w-full h-[53px] bg-[#111112] text-[22px] text-white pl-1 pr-1 outline-none" />
             </div>
           </label>
         </div>
