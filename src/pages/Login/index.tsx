@@ -34,8 +34,8 @@ function Login() {
   }
   
   return (
-    <section className="bg-[#070709] rounded-[34px] z-0 h-[654px] flex">
-      <div className="ml-[60px] mt-[79px]">
+    <section className="bg-[#070709] rounded-[34px] z-0 h-[654px] flex max-sm:rounded-[24px]">
+      <div className="ml-[60px] mt-[79px] max-sm:ml-0 max-sm:mt-5 max-sm:p-12">
         <div className="flex">
           <h1 className="text-white text-5xl font-bold leading-[64px] whitespace-nowrap mb-[60px]">Faça seu login</h1>
           <div className="ml-2 h-12 flex items-end">
@@ -54,7 +54,7 @@ function Login() {
       </div>
 
       <div>
-        <img src={LoginLandscape} alt="paisagem"  className="w-full h-full"/>
+        <img src={LoginLandscape} alt="paisagem"  className="w-full h-full max-sm:hidden"/>
       </div>
     </section>
   );
