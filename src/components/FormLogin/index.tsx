@@ -19,7 +19,7 @@ function FormLogin({ email, setEmail, senha, setSenha, onClickEvent, loading }: 
   };
 
   return (
-    <form>
+    <form className="sm:max-md:mx-[50px]">
       <div className="flex flex-col">
         <div className="flex flex-col z-10">
           <label className="text-gray-400 flex flex-col font-normal text-[14px] leading-5">
