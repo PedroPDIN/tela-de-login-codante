@@ -1,7 +1,38 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import LoginLandscape from "../../assets/image-login.png"
 import FormLogin from "../../components";
 
 function Login() {
+  const [email, setEmail] = useState<string>("");
+  const [senha, setSenha] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const navigate = useNavigate();
+
+  const onClickEvent = (e: React.FormEvent<HTMLButtonElement>): void => {
+    // eslint-disable-next-line no-useless-escape
+    const rgxEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,15}$/g;
+    const rgxSenha = /[\w\d]{5,8}/g;
+    const validEmail = rgxEmail.test(email);
+    const validSenha = rgxSenha.test(senha);
+
+    setLoading(true);
+
+    if (!validEmail || !validSenha) {
+      setTimeout(() => {
+        alert("Email ou senha estão no formato incorreto");
+        setLoading(false)
+      }, 3000)
+    } else {
+      setTimeout(() => {
+        navigate("/welcome")
+        setLoading(false)
+      }, 3000)
+    }
+
+    e.preventDefault();
+  }
+  
   return (
     <section className="bg-[#070709] rounded-[34px] z-0 h-[654px] flex">
       <div className="ml-[60px] mt-[79px]">
@@ -12,7 +43,14 @@ function Login() {
           </div>
         </div>
 
-        <FormLogin />
+        <FormLogin
+          email={ email }
+          setEmail={ setEmail }
+          senha={ senha }
+          setSenha={ setSenha }
+          onClickEvent={ onClickEvent }
+          loading={ loading }
+        />
       </div>
 
       <div>
