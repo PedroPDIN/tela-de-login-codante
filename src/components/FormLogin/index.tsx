@@ -1,4 +1,4 @@
-import { AiOutlineLoading3Quarters } from "react-icons/ai"
+import ButtonFormLogin from "../ButtonFormLogin"
 
 interface Props {
   email: string,
@@ -48,22 +48,7 @@ function FormLogin({ email, setEmail, senha, setSenha, onClickEvent, loading }: 
 
         <a href="sem redirecionamento" className="text-gray-400 not-italic font-normal text-[13px] leading-[18px] flex justify-end pr-3 pt-6 pb-10 underline">Esqueci minha senha</a>
 
-        {loading
-          ?
-          <button
-            onClick={ onClickEvent }
-            className="text-white font-normal text-[23px] leading-[30px] bg-gradient-to-tr from-[#4158D0] via-[#C850C0] to-[#FFCC70] h-[53px] rounded-2xl"
-          >
-            <AiOutlineLoading3Quarters className="animate-spin text-[30px] w-full"/>
-          </button> 
-          :
-          <button
-            onClick={ onClickEvent }
-            className="text-white font-normal text-[23px] leading-[30px] bg-gradient-to-tr from-[#4158D0] via-[#C850C0] to-[#FFCC70] h-[53px] rounded-2xl"
-          >
-            Entrar
-          </button>
-        }
+        <ButtonFormLogin onClickEvent={onClickEvent} loading={loading} />
 
         <a href="sem redirecionamento" className="text-gray-400 font-normal text-[13px] leading-[18px] mt-[35px] flex justify-center underline">Ainda não tenho uma conta</a>
       </div>
