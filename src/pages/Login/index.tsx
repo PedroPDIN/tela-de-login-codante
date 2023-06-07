@@ -34,8 +34,8 @@ function Login() {
   }
   
   return (
-    <section className="bg-[#070709] rounded-[34px] z-0 h-[654px] flex max-sm:rounded-[24px]">
-      <div className="ml-[60px] mt-[79px] max-sm:ml-0 max-sm:mt-5 max-sm:p-12 sm:max-md:ml-0 sm:max-md:w-[600px]">
+    <section className="bg-[#070709] rounded-[34px] z-0 h-[654px] flex max-sm:rounded-[24px] sm:max-md:h-[600px]">
+      <div className="ml-[60px] mt-[79px] max-sm:ml-0 max-sm:mt-5 max-sm:p-12 sm:max-md:ml-0 sm:max-md:w-[600px] sm:max-md:mt-[40px]">
         <div className="flex sm:max-md:justify-center">
           <h1 className="text-white text-5xl font-bold leading-[64px] whitespace-nowrap mb-[60px]">Faça seu login</h1>
           <div className="ml-2 h-12 flex items-end">
